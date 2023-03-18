@@ -16,10 +16,6 @@
 在消息生产端使用 ```PropertyKeyConst.EXACTLYONCE_DELIVERY``` 属性设置打开 ```Exactly-Once``` 投递语义。详情请见步骤三：生产端开启 Exactly-Once 投递语义。
 在消息消费端创建 ExactlyOnceConsumer，并开启 Exactly-Once 的消费模式。详情请见步骤四：消费端开启 Exactly-Once 投递语义。
 
->步骤一：添加依赖
->
-消息队列 RocketMQ 的 ExactlyOnceConsumer 在客户端 SDK ons-client-ext-1.8.0.Final 中发布，若要使用 Exactly-Once 投递语义，需在应用中依赖该 SDK。
-另外，ExactlyOnceConsumer 基于 Spring 实现了通过注解 @MQTransaction 开启 Exactly-Once 消费的方式，项目中已经内置Spring3.0的依赖
 
 > 步骤一：创建消费事务表
 
