@@ -106,11 +106,11 @@ public class TestExactlyOnceProducer {
 创建 ExactlyOnceConsumer 时，可以通过设置 PropertyKeyConst.EXACTLYONCE_DELIVERY 属性打开或者关闭 Exactly-Once 投递语义。ExactlyOnceConsumer 默认打开 Exactly-Once 投递语义。
 使用 ExactlyOnceConsumer 消费时，在消息监听器 MessageListener 的 consume 方法中，您的业务处理逻辑需要使用 MQDataSource 对数据库的进行读写操作。
 您可以选择以下任一方式在消费端开启 Exactly-Once 投递语义：
-以非 Spring 方式开启 Exactly-Once 投递语义
-MessageListener 中以事务方式实现多项数据库操作和消息消费的事务性
-MessageListener 中通过 Springboot 注解方式实现开启 Exactly-Once 投递语义
-MessageListener 中通过 MyBatis 方式实现 Exactly-Once 投递语义
-以非 Spring 方式开启 Exactly-Once 投递语义
+- 以非 Spring 方式开启 Exactly-Once 投递语义
+- MessageListener 中以事务方式实现多项数据库操作和消息消费的事务性
+- MessageListener 中通过 Springboot 注解方式实现开启 Exactly-Once 投递语义
+- MessageListener 中通过 MyBatis 方式实现 Exactly-Once 投递语义
+- 以非 Spring 方式开启 Exactly-Once 投递语义
 示例如下所示。
 ```
 /**
