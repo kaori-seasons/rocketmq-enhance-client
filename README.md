@@ -3,7 +3,9 @@
 
 #### 背景信息
 本文档参考阿里云Rocketmq的Exactly-once页面,覆盖Exactly-once功能
+
 消息队列 RocketMQ 的 Exactly-Once 投递语义适用于接收消息 > 处理消息 > 结果持久化到数据库的流程，能够保证您的每一条消息消费的最终处理结果写入到您的数据库有且仅有一次，保证消息消费的幂等。
+
 更多 Exactly-Once 投递语义的概念和典型使用场景，请参见 Exactly-Once 投递语义。
 
 #### 操作步骤
@@ -13,8 +15,9 @@
 在应用中添加 SDK 包依赖和 Spring 3.0 以上版本的依赖。详情请见步骤一：添加依赖。
 在用于存储消息消费结果的数据库中创建 ```transaction_record``` 表。详情请见步骤二：创建消费事务表。
 注意：存储消息消费结果的数据库系统必须支持本地事务。
-在消息生产端使用 ```PropertyKeyConst.EXACTLYONCE_DELIVERY``` 属性设置打开 ```Exactly-Once``` 投递语义。详情请见步骤三：生产端开启 Exactly-Once 投递语义。
-在消息消费端创建 ExactlyOnceConsumer，并开启 Exactly-Once 的消费模式。详情请见步骤四：消费端开启 Exactly-Once 投递语义。
+在消息生产端使用 ```PropertyKeyConst.EXACTLYONCE_DELIVERY``` 属性设置打开 ```Exactly-Once``` 投递语义。
+详情请见步骤二：生产端开启 Exactly-Once 投递语义。
+在消息消费端创建 ExactlyOnceConsumer，并开启 Exactly-Once 的消费模式。详情请见步骤三：消费端开启 Exactly-Once 投递语义。
 
 
 > 步骤一：创建消费事务表
