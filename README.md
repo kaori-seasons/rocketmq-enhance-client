@@ -1,5 +1,5 @@
 # rocketmq-enhance-client
-基于rocketmq-client与rocketmq-ons实现exactly-once语义
+基于rocketmq-client实现exactly-once语义
 
 #### 背景信息
 本文档参考阿里云Rocketmq的Exactly-once页面,覆盖Exactly-once功能
